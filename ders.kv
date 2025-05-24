@@ -1,0 +1,62 @@
+<DersScreen>:
+    name: 'ders_screen'
+    BoxLayout:
+        orientation: 'vertical'
+        padding:  [10, 10, 10, 30]
+        spacing: 10
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 10
+            Image:
+                source: 'ödev.png'  # Bu dosyayı proje dizinine eklemelisin
+                size_hint_x: 0.3
+                allow_stretch: True
+            Label:
+                text: 'Ödevler'
+                font_size: 18
+                valign: 'middle'
+                halign: 'left'
+                text_size: self.size
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 10
+            Image:
+                source: 'review.png'
+                size_hint_x: 0.3
+                allow_stretch: True
+            Label:
+                text: 'Sorular'
+                font_size: 18
+                valign: 'middle'
+                halign: 'left'
+                text_size: self.size
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:10
+            Image:
+                source: 'technique.png'
+                size_hint_x: 0.3
+                allow_stretch: True
+            Label:
+                text: 'Pamadora'
+                font_size: 18
+                valign: 'middle'
+                halign: 'left'
+                text_size: self.size
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 5
+            Image:
+                source: 'tablet.png'
+                size_hint_x: 0.3
+                allow_stretch: True
+            Label:
+                text: 'Ders Programım'
+                font_size: 18
+                valign: 'middle'
+                halign: 'left'
+                text_size: self.size

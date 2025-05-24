@@ -1,0 +1,48 @@
+<TaskScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            font_size: 24
+            size_hint_y: None
+            height: 50
+
+        BoxLayout:
+            size_hint_y: None
+            height: 40
+
+            TextInput:
+                id: task_input
+                hint_text: "Bir görev girin..."
+                multiline: False
+
+            Button:
+                text: "Ekle"
+                size_hint_x: None
+                width: 80
+                on_press:
+                    root.add_task(task_input.text)
+                    task_input.text = ""
+
+        ScrollView:
+            GridLayout:
+                id: task_list
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 40
+                spacing: 5
+
+
+
+
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            size: (100, 40)
+            on_press: app.root.current = "main_screen"
+
+              

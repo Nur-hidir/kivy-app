@@ -1,0 +1,208 @@
+# screen.kv
+
+# ScreenManager ile ekranları tanımlıyoruz
+ScreenManager:
+    MainScreen:
+        name: 'main_screen'
+     
+    TaskScreen:
+        name: 'task_screen'
+     
+    DersScreen:
+        name: 'ders_screen'
+    SporScreen:
+        name: 'spor_screen'
+    GunlukScreen:
+        name: 'gunluk_screen'    
+
+# MainScreen: ilk ekran ve butonlar
+<MainScreen>:
+    GridLayout:
+        cols: 2
+        rows: 2
+        size_hint: (1, 1)
+        padding: [10, 10]
+        spacing: 10
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+         
+
+             
+
+        Button:
+            text: "Yapılacaklar \nListesi"
+            size_hint: (2, 1)
+            background_color: (163/255, 211/255, 214/255)
+            background_normal: 'a.jpg'
+            color: (13/255, 34/255, 41/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'task_screen'  # TaskScreen'e geçiş
+
+         
+
+        Button:
+            text: "Ders \nProgramı"
+            size_hint: (2, 1)
+            background_color: (163/255, 211/255, 214/255)
+            background_normal: 'g.jpg'
+            color: (13/255, 34/255, 41/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'ders_screen'  # DersScreen'e geçiş
+
+        Button:
+            text: "Spor"
+            size_hint: (2, 1)
+            background_color: (163/255, 211/255, 214/255)
+            background_normal: 'e.jpg'
+            color: (13/255, 34/255, 41/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'spor_screen'  # SporScreen'e geçiş
+
+        Button:
+            text: "Günlük"
+            size_hint: (2, 1)
+            background_color: (163/255, 211/255, 214/255)
+            background_normal: 'a.jpg'
+            color: (13/255, 34/255, 41/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'gunluk_screen'  # GünlükScreen'e geçiş
+
+# RutinlerScreen: ikinci ekran
+<RutinlerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Günlük Rutinler"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+            background_color: (26/255, 30/255, 31/255)
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            width: 50
+            height: 50
+            background_color: (26/255, 30/255, 31/255)
+            color: (247/255, 252/255, 252/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'main_screen'  # MainScreen'e geri dönüş
+
+# TaskScreen: üçüncü ekran
+<TaskScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Yapılacaklar Listesi"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+
+         
+
+# Alışveriş Screen
+<AlisScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Alışveriş Listesi"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            width: 50
+            height: 50
+            background_color: (26/255, 30/255, 31/255)
+            color: (247/255, 252/255, 252/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'main_screen'
+<DersScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Dersler"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            width: 50
+            height: 50
+            background_color: (26/255, 30/255, 31/255)
+            color: (247/255, 252/255, 252/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'main_screen'
+<SporScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Spor"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            width: 50
+            height: 50
+            background_color: (26/255, 30/255, 31/255)
+            color: (247/255, 252/255, 252/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'main_screen' 
+<GunlukScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+    FloatLayout:
+        Label:
+            text: "Günlük"
+            size_hint: None, None
+            font_size: 34
+            height: 50
+            width:self.texture_size[0]
+            pos_hint:{"top":1,"center_x":0.5}
+
+        Button:
+            text: "Geri"
+            size_hint: (None, None)
+            width: 50
+            height: 50
+            background_color: (26/255, 30/255, 31/255)
+            color: (247/255, 252/255, 252/255)
+            bold: True
+            font_name: "Roboto"
+            on_press: root.manager.current = 'main_screen'                                      

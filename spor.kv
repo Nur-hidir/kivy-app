@@ -1,0 +1,84 @@
+<SporScreen>:
+    FloatLayout:
+        GridLayout:
+            cols: 2
+            spacing: 40
+            padding:60
+            size_hint: None, None
+            # GridLayout'un genişliğini ve yüksekliğini, içindeki BoxLayout'ların toplamından ayarlıyoruz.
+            size: self.minimum_size
+            pos_hint: {"top": 1, "center_x": 0.5}
+            
+            # Yoga hücresi
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                size: 180, 220  # 180x180 buton + 40 label için
+                Button:
+                    background_normal: "yoga.png"
+                     
+                    size_hint: None, None
+                    size: 180, 180
+                     
+                Label:
+                    text: "Yoga"
+                    font_size: 18
+                    size_hint: None, None
+                    size: 180, 40
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+            # Meditasyon hücresi
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                size: 180, 220
+                Button:
+                    background_normal: "meditasyon.png"
+                    size_hint: None, None
+                    size: 180, 180
+                Label:
+                    text: "Meditasyon"
+                    font_size: 18
+                    size_hint: None, None
+                    size: 180, 40
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+            # Plates hücresi
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                size: 180, 220
+                Button:
+                    background_normal: "plates.png"
+                    size_hint: None, None
+                    size: 180, 180
+                Label:
+                    text: "Plates"
+                    font_size: 18
+                    size_hint: None, None
+                    size: 180, 40
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+            # Karın Egzersizi hücresi
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                size: 180, 220
+                Button:
+                    background_normal: "fitness.png"
+                    size_hint: None, None
+                    size: 180, 180
+                Label:
+                    text: "Fitness"
+                    font_size: 18
+                    size_hint: None, None
+                    size: 180, 40
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
